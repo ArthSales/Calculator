@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        black: {
+                            bg: '#000',
+                            btn: '#111'
+                        },
+                        blue: {
+                            light: '#00CFE1',
+                            dark: '#0C64ED',
+                            hover: '#0CF7CA'
+                        },
+                        orange: {
+                            light: '#E08D33',
+                            dark: '#ED562B',
+                            hover: '#EDBA2B'
+                        },
+                        purple: {
+                            light: '#8200E0',
+                            dark: '#550CF7',
+                            hover: '#D60CF7'
+                        }
+                    },
+                    fontFamily: {
+                        agdasima: ['Agdasima', 'sans-serif']
+                    },
+                    keyframes: {
+                        balanco_kf: {
+                            '0%, 100%': {
+                                transform: 'rotate(-10deg)'
+                            },
+                            '50%': {
+                                transform: 'rotate(10deg)'
+                            }
+                        }
+                    },
+                    animation: {
+                        balanco: 'balanco_kf 0.5s ease-in-out infinite'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="flex flex-col bg-gradient-to-l from-blue-light to-black-bg text-white justify-center items-center my-40 font-agdasima">
+    
+    <div class="grid grid-cols-4 grid-rows-5 text-2xl self-center w-max xl:w-1/4">
+        <div class="col-span-4 bg-gray-700 flex flex-col items-end justify-around p-2 break-all rounded-t-xl">
+            <div class="text-gray-300" data-previous></div>
+            <div class="text-4xl" data-current></div>
+        </div>
+        <button class="p-4 bg-black-btn col-span-2 h-24 hover:text-black-btn hover:bg-white" data-all-clear>AC</button>
+        <button class="p-4 bg-black-btn hover:text-black-btn hover:bg-white" data-delete>DEL</button>
+        <button class="p-4 bg-blue-light hover:text-black-btn hover:bg-white" data-operator>:</button>
+        <button class="p-4 bg-black-btn hover:text-black-btn hover:bg-white" data-number>7</button>
+        <button class="p-4 bg-black-btn hover:text-black-btn hover:bg-white" data-number>8</button>
+        <button class="p-4 bg-black-btn hover:text-black-btn hover:bg-white" data-number>9</button>
+        <button class="p-4 bg-blue-light hover:text-black-btn hover:bg-white" data-operator>*</button>
+        <button class="p-4 bg-black-btn hover:text-black-btn hover:bg-white" data-number>4</button>
+        <button class="p-4 bg-black-btn hover:text-black-btn hover:bg-white" data-number>5</button>
+        <button class="p-4 bg-black-btn hover:text-black-btn hover:bg-white" data-number>6</button>
+        <button class="p-4 bg-blue-light hover:text-black-btn hover:bg-white" data-operator>+</button>
+        <button class="p-4 bg-black-btn hover:text-black-btn hover:bg-white" data-number>1</button>
+        <button class="p-4 bg-black-btn hover:text-black-btn hover:bg-white" data-number>2</button>
+        <button class="p-4 bg-black-btn hover:text-black-btn hover:bg-white" data-number>3</button>
+        <button class="p-4 bg-blue-light hover:text-black-btn hover:bg-white" data-operator>-</button>
+        <button class="p-4 bg-black-btn col-span-2 rounded-bl-xl hover:text-black-btn hover:bg-white" data-number>.</button>
+        <button class="p-4 bg-black-btn hover:text-black-btn hover:bg-white" data-number>0</button>
+        <button class="p-4 bg-blue-light rounded-br-xl hover:text-black-btn hover:bg-white" data-equal>=</button>
+    </div>
+
+    <div class="my-32 w-3/5 font-bold text-base">
+        <ul class="flex justify-between">
+            <li>
+                <a href="https://www.linkedin.com/in/arthur-sales-nascimento/" target="_blank" class=" w-max flex flex-col gap-2 justify-around">
+                    <img src="assets/linkedin.png" alt="Linkedin's logo" class="hover:animate-balanco">
+                    <p class="pt-2">Linkedin</p>
+                </a>
+            </li>
+            <li class="flex flex-nowrap">
+                <a href="https://github.com/ArthSales" target="_blank" class="flex flex-col gap-2 justify-around w-max">
+                    <img src="assets/github.png" alt="Github's logo" class="w-full hover:animate-balanco">
+                    <p class="pt-4">Github</p>
+                </a>
+            </li>
+            <li>
+                <a href="https://arthsales.github.io/Portfolio-page/" target="_blank" class="flex flex-col gap-2 justify-around w-max">
+                    <img src="assets/cv.png" alt="Curriculum icon" class="hover:animate-balanco">
+                    <p class="pt-2">Portfolio</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+<script src="main.js"></script>
+</html>
